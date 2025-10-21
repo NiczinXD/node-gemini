@@ -1,8 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 import { fazerPergunta } from "./pergunta.js";
+import "dotenv/config";
 
 const ai = new GoogleGenAI({
-  apiKey: "AIzaSyCha11uVy0FfAMnTWQKn2hxSnndk8qSh1I",
+  apiKey: process.env.GOOGLE_GENAI_API_KEY,
 });
 
 async function main() {
